@@ -1,0 +1,100 @@
+@mixin center-x {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin center-y {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin center {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-wrap {
+    width: 300px;
+    height: 225px;
+    overflow: hidden;
+    position: relative;
+    background-color: #000000;
+
+    img {
+        position: absolute;
+        width: auto;
+    }
+
+    // 不保持比例，直接完全填充
+    img.scaleToFill {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    // 保持比例，长边完整显示，另外一边居中
+    img.aspectFit-x {
+        width: 100%;
+        @include center-y;
+    }
+    img.aspectFit-y {
+        height: 100%;
+        @include center-x;
+    }
+
+    // 保持比例，短边完全显示，另外一边居中
+    img.aspectFill-x {
+        width: 100%;
+        @include center-y;
+    }
+    img.aspectFill-y {
+        height: 100%;
+        @include center-x;
+    }
+
+    // 裁剪模式，保持原图尺寸
+
+    // 1. 只显示图片的顶部区域，左右居中
+    img.top {
+        @include center-x;
+    }
+
+    img.bottom {
+        bottom: 0;
+        @include center-x;
+    }
+
+    img.center {
+        @include center;
+    }
+
+    img.left {
+        @include center-y;
+    }
+
+    img.right {
+        right: 0;
+        @include center-y;
+    }
+
+    img.top-left {
+        top: 0;
+        left: 0;
+    }
+
+    img.top-right {
+        top: 0;
+        right: 0;
+    }
+
+    img.bottom-left {
+        bottom: 0;
+        left: 0;
+    }
+
+    img.bottom-right {
+        bottom: 0;
+        right: 0;
+    }
+}
