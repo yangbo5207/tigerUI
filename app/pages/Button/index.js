@@ -1,9 +1,1 @@
-import React from 'react';
-
-export default function() {
-    return (
-        <div className="button">
-            xxxxxxxxx
-        </div>
-    )
-}
+export { default } from './Button';

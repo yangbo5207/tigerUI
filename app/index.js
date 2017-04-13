@@ -13,7 +13,7 @@ const tigerUIElement = document.querySelector('.tiger-ui');
 render((
     <Router history={hashHistory}>
         <Route path="/" component={Index}>
-            <IndexRoute component={Button} />
+            <IndexRoute component={Color} />
             <Route path="/color" component={Color} />
             <Route path="/icon" component={Icon} />
             <Route path="/button" component={Button} />
