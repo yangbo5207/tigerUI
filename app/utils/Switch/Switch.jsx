@@ -1,7 +1,9 @@
 import React from 'react';
 import Icon from 'components/Icon';
 import {Link} from 'react-router';
-import {navCn} from '../Index/config';
+import {navCn} from 'pages/Index/config';
+
+import './style.scss';
 
 const defaultProps = {
     prevType: null,

@@ -3,6 +3,8 @@ import Icon from 'components/Icon';
 import {iconTypes} from './config';
 import {Link} from 'react-router';
 
+import Switch from 'utils/Switch';
+
 import './style.scss';
 
 class Picon extends Component {
@@ -64,16 +66,7 @@ class Picon extends Component {
                     })}
                 </ul>
 
-                <div className="switch-nav">
-                    <div className="switch prev">
-                        <Icon type="arrowleft" />
-                        <Link  className="link">null</Link>
-                    </div>
-                    <div className="switch next">
-                        <Link to="/button" className="link">Button 按钮</Link>
-                        <Icon type="arrowright" />
-                    </div>
-                </div>
+                <Switch nextType="button" />
             </div>
         )
     }

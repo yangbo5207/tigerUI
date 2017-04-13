@@ -1,0 +1,15 @@
+@import "../../components/style/colors";
+
+.switch-nav {
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid $grey-5;
+    margin-top: 50px;
+
+    .link {
+        margin: 0 10px;
+        color: $blue-6;
+    }
+}
