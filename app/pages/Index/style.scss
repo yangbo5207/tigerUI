@@ -1,0 +1,47 @@
+@import "../../components/style/colors.scss";
+@import "./post.scss";
+
+body {
+    background-color: $grey-3;
+    color: $grey-8;
+}
+.tiger-ui-content {
+    width: 1000px;
+    margin: 20px auto;
+    background-color: $white;
+    border-radius: 4px;
+    padding: 30px 0;
+
+    display: flex;
+
+    .tiger-ui-nav {
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        transition-duration: 0.3s;
+
+        a {
+            height: 40px;
+            line-height: 40px;
+            color: $grey-8;
+            padding-left: 20px;
+            transition-duration: 0.3s;
+            border-right: 1px solid $grey-4;
+
+            &:hover {
+                color: $blue-6;
+            }
+        }
+
+        .active {
+            background-color: $blue-1;
+            border-right: 1px solid $blue-4;
+            color: $blue-6;
+        }
+    }
+
+    .tiger-ui-components {
+        flex: 1;
+        padding: 0 30px;
+    }
+}

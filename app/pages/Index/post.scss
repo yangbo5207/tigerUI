@@ -1,0 +1,78 @@
+@import "../../components/style/fonts/source-code-pro.css";
+@import "../../components/style/colors";
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    color: #000;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: normal;
+    color: #000;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3, h4, h5, h6 {
+    font-size: 16px;
+}
+
+pre {
+    background-color: #f7f7f7;
+    padding: 15px;
+    margin: 16px 0;
+}
+
+code {
+    font-family: 'Source Code Pro';
+    font-size: 14px;
+    color: rgb(233, 63, 114);
+    padding: 5px;
+}
+
+.code-box {
+    border: 1px solid $grey-5;
+    margin: 16px 0;
+    padding: 16px 0;
+
+    .code-box-item {
+        border-top: 1px solid $grey-4;
+        padding: 20px;
+        position: relative;
+    }
+
+    .show-box-title {
+        position: absolute;
+        padding: 0 5px;
+        left: 0;
+        top: -13px;
+        background-color: $white;
+    }
+
+    p {
+        color: $grey-7;
+    }
+
+    .show-code code {
+        padding: 0;
+        display: block;
+        line-height: 1.8;
+    }
+}
+
+.switch-nav {
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid $grey-5;
+    margin-top: 50px;
+
+    .link {
+        margin: 0 10px;
+        color: $blue-6;
+    }
+}
