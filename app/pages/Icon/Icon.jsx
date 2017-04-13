@@ -16,6 +16,12 @@ class Picon extends Component {
         const mapStyle = {
             fontSize: '100px'
         }
+
+        const loadingStyle = {
+            fontSize: '30px',
+            color: 'orange'
+        }
+
         return (
             <div className="tiger-pages-icon">
                 <h1>图标组件 Icon</h1>
@@ -31,6 +37,9 @@ class Picon extends Component {
                         <div className="show-box-title">演示</div>
                         <p>
                             <Icon type="success" />
+                        </p>
+                        <p>
+                            <Icon type="loading" style={loadingStyle} />
                         </p>
                         <p>
                             <Icon type="warning" style={warningStyle} />

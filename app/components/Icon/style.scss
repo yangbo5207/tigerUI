@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'iconfont';  /* project id 276517 */
-  src: url('//at.alicdn.com/t/font_p9z0506qonjexw29.eot');
-  src: url('//at.alicdn.com/t/font_p9z0506qonjexw29.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_p9z0506qonjexw29.woff') format('woff'),
-  url('//at.alicdn.com/t/font_p9z0506qonjexw29.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_p9z0506qonjexw29.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_4v5kw3yelcvxi529.eot');
+  src: url('//at.alicdn.com/t/font_4v5kw3yelcvxi529.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_4v5kw3yelcvxi529.woff') format('woff'),
+  url('//at.alicdn.com/t/font_4v5kw3yelcvxi529.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_4v5kw3yelcvxi529.svg#iconfont') format('svg');
 }
 
 .tiger-icon {
@@ -16,6 +16,7 @@
     color: black;
 }
 
+.tiger-icon-loading:before { content: '\eee3'};
 .tiger-icon-favorite:before { content: '\e7ce'};
 .tiger-icon-skip:before { content: '\e718'};
 .tiger-icon-good:before { content: '\e717'};
@@ -44,3 +45,19 @@
 .tiger-icon-close:before { content: '\e69a'};
 .tiger-icon-category:before { content: '\e699'};
 .tiger-icon-cart:before { content: '\e698'};
+
+.tiger-icon-spin {
+    animation-name: tiger-rotate;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes tiger-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
