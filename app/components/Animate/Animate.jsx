@@ -1,50 +1,32 @@
 import React, { Component } from 'react';
 import { CSSTransitionGroup } from "react-transition-group";
+import Button from '../Button';
 import './style.scss';
 
 export default class TodoList extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            items: ['hello', 'world', 'click', 'me']
-        }
 
-        this.handleAdd = this.handleAdd.bind(this);
+    state = {
+        tag: false
     }
 
-    handleAdd() {
-        const newItems = this.state.items.concat([
-            prompt('Enter some text')
-        ])
+    switchTag = e => {
         this.setState({
-            items: newItems
-        })
-    }
-
-    handleRemove(i) {
-        let newItems = this.state.items.slice();
-        newItems.splice(i, 1);
-        this.setState({
-            items: newItems
+            tag: !this.state.tag
         })
     }
 
     render() {
-        const items = this.state.items.map((item, i) => (
-            <div key={item} onClick={() => this.handleRemove(i)}>
-                { item }
-            </div>
-        ))
+        const { tag } = this.state;
 
         return (
             <div>
-                <button onClick={this.handleAdd}>Add Item</button>
+                <Button type="primary" onClick={this.switchTag} context={tag ? 'click to hide' : 'click to show'}></Button>
                 <CSSTransitionGroup
                     transitionName="example"
                     transitionEnterTimeout={500}
                     transitionLeaveTimeout={300}
                 >
-                    {items}
+                    { tag ? <div className="items"></div> : null }
                 </CSSTransitionGroup>
             </div>
         )
